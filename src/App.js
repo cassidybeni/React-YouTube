@@ -5,7 +5,6 @@ import NavBar from "./NavBar/NavBar";
 import About from "./About/About";
 import Video from "./Video/Video";
 
-console.log(process.env.REACT_APP_API_KEY)
 export class App extends Component {
   render() {
     return (
