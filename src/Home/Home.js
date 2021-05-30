@@ -20,7 +20,6 @@ export class Home extends Component {
       const { data } = await axios.get(
         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${this.state.input}&key=${process.env.REACT_APP_API_KEY}`
       );
-      console.log(data)
       this.setState({ input: "", videoList: data.items });
     } catch (e) {
       this.setState({ input: "", videoList: [] });
@@ -35,8 +34,8 @@ export class Home extends Component {
     const { videoList, input } = this.state;
     const li = videoList.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <li>
+        <Link to={`/videos/${video.id.videoId}`}>
+          <li key={video.id.videoId}>
             <img src={video.snippet.thumbnails.high.url} alt="thumbnail"></img>
             <h3>{video.snippet.title}</h3>
           </li>
