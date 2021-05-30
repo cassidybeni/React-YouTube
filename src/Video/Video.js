@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-import YouTube from "react-youtube";
+import "./Video.css";
 
 export class Video extends Component {
   render() {
-    const { id } = this.props.match.params.id.videoId;
-
     return (
-      <div>
-        <YouTube videoId={id}></YouTube>
+      <div className="Video">
+        <iframe
+          src={`https://www.youtube.com/embed/${this.props.match.params.id}`} //accesses id from /videos/:id via match.params on props
+          allowFullScreen
+          title="YTPlayer"
+        ></iframe>
       </div>
     );
   }

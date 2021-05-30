@@ -34,7 +34,7 @@ export class Home extends Component {
     const { videoList, input } = this.state;
     const li = videoList.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`}>
+        <Link to={`/video/${video.id.videoId}`}>
           <li key={video.id.videoId}>
             <img src={video.snippet.thumbnails.high.url} alt="thumbnail"></img>
             <h3>{video.snippet.title}</h3>
