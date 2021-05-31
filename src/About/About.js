@@ -33,7 +33,7 @@ function About() {
           patient, resilient, and diligent web developer looking for
           opportunities to blend my career with my passions. I have experience
           in JavaScript, HTML and CSS as a full stack developer. I am passionate
-          about music, fashion, and NBA, as well as, communication, teamwork,
+          about music, and NBA basketball, as well as, communication, teamwork,
           and problem-solving.
         </p>
       </div>
