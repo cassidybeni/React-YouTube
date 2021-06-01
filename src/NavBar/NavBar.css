@@ -33,8 +33,28 @@ a:link {
   margin-top: 20px;
 }
 
-#icon {
+.Icon {
   display: inline-block;
   height: 100px;
   width: auto;
+}
+
+@media (max-width: 800px) {
+  .Nav {
+    display: inline-block;
+    text-align: right;
+    padding-bottom: 50px;
+  }
+
+  .Nav img {
+    display: inline-block;
+    text-align: right;
+    height: 50px;
+    width: 100px;
+    padding-bottom: 50px;
+  }
+
+  .Icon {
+    display: none;
+  }
 }

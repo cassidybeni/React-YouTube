@@ -24,7 +24,7 @@ function NavBar() {
         </Link>
       </nav>
       <img
-        id="icon"
+        className="Icon"
         src="https://cdn1.iconfinder.com/data/icons/youtuber/256/video-logo-play-icon-512.png"
         alt="icon"
       ></img>
