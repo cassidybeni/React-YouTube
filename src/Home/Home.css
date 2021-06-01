@@ -42,6 +42,8 @@ ul li {
 
 li img {
   display: flex;
+  width: 300px;
+  height: 225px;
   margin: auto;
   margin-left: auto;
   margin-right: auto;
