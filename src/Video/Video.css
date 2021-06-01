@@ -1,6 +1,6 @@
 .Video {
   display: flex;
-  padding-top: 100px;
+  padding-top: 50px;
   justify-content: center;
 }
 
@@ -11,5 +11,11 @@ iframe {
 }
 
 @media (max-width: 800px) {
- 
+  .Video {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    flex-shrink: 1;
+  }
 }
