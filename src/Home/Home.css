@@ -49,6 +49,11 @@ li img {
   margin-right: auto;
 }
 
+.defaultMsg {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 800px) {
   .SearchBar {
     display: flex;

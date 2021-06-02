@@ -10,6 +10,7 @@ export class Home extends Component {
     this.state = {
       input: "",
       videoList: [],
+      error: false,
     };
   }
 
@@ -20,9 +21,9 @@ export class Home extends Component {
       const { data } = await axios.get(
         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${this.state.input}&key=${process.env.REACT_APP_API_KEY}`
       );
-      this.setState({ input: "", videoList: data.items });
+      this.setState({ input: "", videoList: data.items, error: false });
     } catch (e) {
-      this.setState({ input: "", videoList: [] });
+      this.setState({ input: "", videoList: [], error: true });
     }
   };
 
@@ -31,7 +32,7 @@ export class Home extends Component {
   };
 
   render() {
-    const { videoList, input } = this.state;
+    const { videoList, input, error } = this.state;
     const li = videoList.map((video) => {
       return (
         <Link to={`/video/${video.id.videoId}`}>
@@ -58,9 +59,11 @@ export class Home extends Component {
             ></img>
           </button>
         </form>
-        <div>
+        {!error && videoList.length >= 1 ? (
           <ul>{li}</ul>
-        </div>
+        ) : (
+          <h3 className="defaultMsg">No Results Yet</h3>
+        )}
       </div>
     );
   }
