@@ -1,8 +1,17 @@
 .Nav {
+  /* 
+  did you use inline-flex so that the youtube icon could display on the same line as the rest of the nav?
+  My rec would be to use regular flex and keep the youtube icon inside Nav.
+  */
   display: inline-flex;
   align-items: center;
+  /* Is this float:right just to reorder the youtube icon and the rest of the nav? con
+     if so, consider fixing this by changing the order of the jsx. Using float might have some 
+     unintended consequences as you keep working on the NavBar component.
+  */
   float: right;
   flex-wrap: wrap;
+  /* gap and/or grid-gap looks to be the culprit behind the large vertical spacing when screen width is ~700px*/
   gap: 500px;
   padding-right: 25%;
   padding-top: 20px;
