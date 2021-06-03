@@ -23,6 +23,7 @@ function NavBar() {
           About
         </Link>
       </nav>
+    {/* typically, icons like this link to the home page as well! I'd recommend using a Link here. */}
       <img
         className="Icon"
         src="https://cdn1.iconfinder.com/data/icons/youtuber/256/video-logo-play-icon-512.png"

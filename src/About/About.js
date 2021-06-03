@@ -12,6 +12,10 @@ function About() {
           from a list to watch.
         </p>
       </div>
+      {/*
+         Since there will be an about section for Jordan at some point, I'd recommend making a 
+         separate Bio component. That will make it easier to make changes/updates to the UI! 
+       */}
       <div className="Cassidy">
         <div className="img">
           <img src="/assets/Cassidy.png" alt="Cassidy"></img>
