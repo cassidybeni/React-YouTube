@@ -19,7 +19,7 @@ export class Home extends Component {
 
     try {
       const { data } = await axios.get(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${this.state.input}&key=${process.env.REACT_APP_API_KEY}`
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${this.state.input}&type=video&key=${process.env.REACT_APP_API_KEY}`
       );
       this.setState({ input: "", videoList: data.items, error: false });
     } catch (e) {
