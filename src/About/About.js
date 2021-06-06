@@ -7,7 +7,7 @@ function About() {
       <div className="projectDescription">
         <h1>React Youtube</h1>
         <p>
-          This project is a simple React application that allows the user to
+          This project is a React application that allows the user to
           search for YouTube videos using the YouTube API, then choose a video
           from a list to watch.
         </p>
